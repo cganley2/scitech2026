@@ -8,9 +8,9 @@ zrb2 = io.read('/home/cganley2/qe-data/zrb2/structures/ZrB2_conventional_standar
 surface_from_cif = surface(zrb2, (0, 0, 1), layers=3, vacuum=10.0, periodic=True)
 
 # Create supercell
-n = 4
+n = 3
 slab = make_supercell(surface_from_cif, [[n, 0, 0], [0, n, 0], [0, 0, 1]])
-
+print(len(slab.get_positions()))
 # add_adsorbate(slab, 'O', height=-10, position=(4.0, 3.0))
 # slab.center()
 
